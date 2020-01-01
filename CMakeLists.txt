@@ -5,4 +5,6 @@ include_directories("./inc")
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(threadpool_first main.cpp inc/condition.h src/condition.cpp inc/threadpool.h src/threadpool.cpp)
+aux_source_directory(./src SRCS)
+
+add_executable(threadpool_first main.cpp ${SRCS})
